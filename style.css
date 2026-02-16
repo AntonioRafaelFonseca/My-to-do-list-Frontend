@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root
+{
+  --bg-dark: hsl(0, 0%, 5%);
+  --bg: hsl(0, 0%, 10%);
+  --bg-light: hsl(0, 0%, 25%);
+
+  --box-light: hsla(0, 0%, 100%, 0.1);
+
+  --title: hsl(0, 0%, 95%);
+  --text: hsl(0, 0%, 70%);
+
+  --accent: hsl(15, 70%, 50%);
+
+  --dr: hsl(0, 80%, 30%);
+  --dg: hsl(100, 80%, 30%);
+  --dy: hsl(60, 80%, 30%);
+
+  --r: hsl(0, 90%, 40%);
+  --g: hsl(100, 90%, 40%);
+  --y: hsl(60, 90%, 40%);
+}
+
+body
+{
+  background-color: var(--bg-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 90vh;
+}
+
+
+.tasks
+{
+  width: clamp(100px, 25vw, 300px);
+  height: clamp(250px, 75vh, 400px);
+  background-color: var(--bg);
+
+  border: 3px solid var(--bg-light);
+  border-radius: 10px;
+
+  box-shadow: 3px 3px 10px 5px var(--box-light);
+  /*------------------*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.tasks ul
+{
+  width: 70%;
+  height: clamp(100px, fit-content, 350px);
+
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  border: 3px solid var(--bg);
+  overflow-y: scroll;
+  padding-top: 5px;
+  list-style: decimal;
+}
+
+
+::-webkit-scrollbar
+{
+  background-color: transparent;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track
+{
+  background-color: transparent;
+}
+
+.tasks a
+{
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'Roboto Condensed', 'sans-serif';
+}
+
+.tasks li
+{
+  color: var(--text);
+  font-family: 'Roboto Condensed', 'sans-serif';
+
+  margin-bottom: 5px;
+  background-color: var(--bg);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-right: 8px;
+  border-radius: 5px;
+  border-left: 3px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+.tasks li:hover
+{
+  background-color: hsl(0, 0%, 15%);
+  transform: translate(0px, -3px);
+}
+
+
+
+.create
+{
+  width: clamp(100px, 25vw, 300px);
+  height: clamp(250px, 75vh, 400px);
+  background-color: var(--bg);
+
+  border: 3px solid var(--bg-light);
+  border-radius: 10px;
+
+  box-shadow: 3px 3px 10px 5px var(--box-light);
+  /*------------------*/
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.create .inputs
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+
+.create .inputs input[type='text']
+{
+  width: 70%;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  z-index: 1;
+}
+
+.create .inputs input[type='checkbox']
+{
+  border: none;
+  appearance: none;
+
+  width: 25px;
+  height: 27px;
+  
+  cursor: pointer;
+  position: relative;
+  left: -10px;
+  z-index: 0;
+}
+.create .inputs #red{
+  background-color: var(--dr);
+  border-radius: 0px 5px 5px 0px;
+  left: -25px;
+}
+.create .inputs #yellow{
+  background-color: var(--dy);
+  left: -17px;
+}
+.create .inputs #green{
+  background-color: var(--dg);
+}
+.create .inputs #red:checked{
+  background-color: var(--r);
+}
+.create .inputs #yellow:checked{
+  background-color: var(--y);
+}
+.create .inputs #green:checked{
+  background-color: var(--g);
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+}
+
+.create button
+{
+  width: 85%;
+  height: 10%;
+  border: none;
+  background-color: var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+}
