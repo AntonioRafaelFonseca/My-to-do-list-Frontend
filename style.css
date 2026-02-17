@@ -16,9 +16,9 @@
   --dg: hsl(100, 80%, 30%);
   --dy: hsl(60, 80%, 30%);
 
-  --r: hsl(0, 90%, 40%);
-  --g: hsl(100, 90%, 40%);
-  --y: hsl(60, 90%, 40%);
+  --r: hsl(0, 100%, 50%);
+  --g: hsl(100, 100%, 50%);
+  --y: hsl(60, 100%, 50%);
 }
 
 body
@@ -60,7 +60,7 @@ body
   border: 3px solid var(--bg);
   overflow-y: scroll;
   padding-top: 5px;
-  list-style: decimal;
+  list-style: none;
 }
 
 

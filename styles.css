@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root
+{
+  --bg-dark: hsl(0, 0%, 5%);
+  --bg: hsl(0, 0%, 10%);
+  --bg-light: hsl(0, 0%, 25%);
+
+  --box-light: hsla(0, 0%, 100%, 0.1);
+
+  --title: hsl(0, 0%, 95%);
+  --text: hsl(0, 0%, 70%);
+
+  --accent: hsl(15, 70%, 50%);
+  --accent-grey: hsl(0, 0%, 70%);
+  --accent-low: hsl(93, 81%, 54%);
+
+  --dr: hsl(0, 80%, 30%);
+  --dg: hsl(100, 80%, 30%);
+  --dy: hsl(60, 80%, 30%);
+
+  --r: hsl(0, 100%, 50%);
+  --g: hsl(100, 100%, 50%);
+  --y: hsl(60, 100%, 50%);
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+  height: 95vh;
+  background-color: var(--bg-dark);
+}
+* {
+  font-family: 'Roboto';
+}
+.card
+{
+  width: clamp(100px, 80vw, 700px);
+  height: clamp(250px, 75vh, 400px);
+  background-color: var(--bg);
+
+  border: 3px solid var(--bg-light);
+  border-radius: 10px;
+
+  box-shadow: 3px 3px 10px 5px var(--box-light);
+  /*------------------*/
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.sort
+{
+  width: clamp(100px, 30%, 700px);
+  height: clamp(250px, 80%, 400px);
+  background-color: var(--bg);
+
+  border: 3px solid var(--bg-light);
+  border-radius: 10px;
+
+  box-shadow: 3px 3px 10px 5px var(--box-light);
+  /*------------------*/
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+
+.card .sort .dropdown button{
+  border: none;
+  background-color: var(--accent);
+  border-radius: 5px;
+  margin: 5px 0px 0px 5px;
+}
+
+.card .sort .dropdown:focus .dropdowncontent {
+  display: inline-grid;
+}
+
+.card .sort .dropdowncontent  {
+  display: none;
+  color: var(--text);
+  font-family: 'Roboto Condensed';
+  margin: 3px;
+}
+
+.card .sort .dropdowncontent a {
+  color: var(--text);
+  font-family: 'Roboto Condensed';
+}
+
+.card .sort .dropdowncontent  button {
+  background-color: var(--accent-grey);
+  border-radius: 0px;
+  height: 100%;
+  width: w;
+  transition: background-color 0.3s ease, transform 0.3s ease-in;
+  border: 3px solid var(--bg-light);
+  text-align: center;
+  text-wrap: wrap;
+  border-radius: 5px;
+}
+.card .sort .dropdowncontent  button:hover {
+  background-color: var(--accent-low);
+  transform: translate(0, -5px);
+}
+
+ul
+{
+  width: 70%;
+  height: 45vh;
+
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  border: 3px solid var(--bg);
+  overflow-y: scroll;
+  padding-top: 5px;
+  list-style: auto;
+}
+li
+{
+  color: var(--text);
+  font-family: 'Roboto Condensed', 'sans-serif';
+
+  margin-bottom: 5px;
+  background-color: var(--bg);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-right: 8px;
+  border-radius: 5px;
+  border-left: 3px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+li:hover
+{
+  background-color: hsl(0, 0%, 15%);
+  transform: translate(0px, -3px);
+}
+::-webkit-scrollbar
+{
+  background-color: transparent;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track
+{
+  background-color: transparent;
+}
